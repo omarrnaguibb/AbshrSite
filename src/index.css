@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    font-family: 'Cairo', sans-serif;
+
+}
+
+.home{
+    background-image: url('/public/desktopbg.jpg');
+    background-size: cover;
+      background-position:  center center;
+      height: 100vh;
+}
+
+.home2{
+    background-image: url('/public/desktopbg.jpg');
+    background-position: start start;
+    background-size: cover;
+    height: 100vh;
+}
+
+
+.card {
+    cursor: pointer;
+    transition: all 0.1s ease-in;
+}
+
+.card .back {
+    display: none;
+}
+
+.card:hover .back{
+       display: block;
+       cursor: pointer;
+       transition: all 2s ease-in;
+}
+.card:hover .front{
+    display: none;
+}
+
+.navDesc{
+    font-size: 10px;
+}
+
+.navCard{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.input-form{
+    font-size: 12px;
+    padding: 12px 5px;
+}
+.input-form::placeholder{
+    font-size: 10px;
+    padding: 0 10px;
+}
+
+
+.cardesc{
+    font-size: 10px;
+}
+
+
+.otp-desc{
+    font-size: 9px;
+}
+
+.loginlink{
+    font-size: 10px;
+}
+
+
+
+.imgSwiper{
+    width: 100%;
+    max-height: 50vh;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:1000px) {
+    .navDesc{
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width:450px) {
+    .navDesc{
+        font-size: 8px;
+    }
+}
