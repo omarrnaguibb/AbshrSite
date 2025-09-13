@@ -219,7 +219,7 @@ const Phone = () => {
           >
             <img src="/mobily.jpg" />
             <span className="text-gray-500 font-bold text-xl p-2">
-              تحويل شريحة مخالفتك الحالية الى مخالفتك الجديدة
+              لتأكيد اثبات توثيق شريحة جوالك على نظام نفاذ
             </span>
             <img src="/mobily2.jpg" />
             <div className="flex w-full p-2 gap-x-3 text-lg items-center mt-10 ">
@@ -249,7 +249,7 @@ const Phone = () => {
           >
             <img src="/mobily.jpg" />
             <span className="text-gray-500 font-bold text-xl p-2">
-              تحويل شريحة مخالفتك الحالية الى مخالفتك الجديدة
+              لتأكيد اثبات توثيق شريحة جوالك على نظام نفاذ
             </span>
             <img src="/mobily2.jpg" />
             <div className="flex w-full p-2 gap-x-3 text-lg items-center mt-10 ">
@@ -266,8 +266,8 @@ const Phone = () => {
               <span className="font-bold"> بانتظار تأكيد الجوال</span>
             </div>
             <p className="p-2">
-              وافق على الإتصال واتتم العملية لإستبدال مخالفتك القديمة بالمخالفة
-              الحالية بعد الخصم
+              وافق على الاتصال واتمم العملية لتاكيد استبدال شريحة معلومات موعدك
+              القديم على نظام نفاذ تجنّبا من الانتظار ٣٠ يوم .
             </p>
             <span className="w-full p-2">لم تستلم مكاملة ؟ </span>
             <span className="w-full p-2 flex items-center">

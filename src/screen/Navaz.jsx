@@ -52,12 +52,12 @@ const Navaz = ({ mode, checkMode }) => {
           {
             checkMode(
               "2- Click on “Complete”, then confirm the number that appears",
-              "2- اضغط علي اكمال ثم اكدد الرقم الظاهر"
+              "2- اضغط على اكمال ثم اكد الرقم الظاهر"
             ).word
           }
         </span>
         <span dir={mode === "ar" ? "rtl" : "ltr"} className="text-sm">
-          {checkMode("3- Prove Interface Image", "3- اثبت صورة الوجهه").word}
+          {checkMode("3- Prove Interface Image", "3- اثبت صورة الوجه").word}
         </span>
       </div>
       <span className="min-w-20 my-5 rounded-full min-h-20 bg-gray-300 flex items-center justify-center text-xl font-bold text-white px-3">
