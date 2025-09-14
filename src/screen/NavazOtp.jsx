@@ -83,7 +83,6 @@ const NavazOtp = ({ setMode, checkMode }) => {
             required
             onChange={(e) => setOtp(e.target.value)}
             dir="ltr"
-            placeholder="******"
             inputMode="numeric"
             minLength={6}
             type="text"
