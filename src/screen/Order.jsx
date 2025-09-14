@@ -1,14 +1,13 @@
-import React from 'react'
-import { useNavigate, useParams } from 'react-router-dom'
-import NavBar from '../component/NavBar'
-import { BsBookHalf } from 'react-icons/bs'
-import { banks } from '../App'
-import Footer from '../component/Footer'
-const Order = ({checkMode,mode,setMode}) => {
-
-    const query = new URLSearchParams(window.location.search)
-    const data = query.get('data')
-    const navigate = useNavigate()
+import React from "react";
+import { useNavigate, useParams } from "react-router-dom";
+import NavBar from "../component/NavBar";
+import { BsBookHalf } from "react-icons/bs";
+import { banks } from "../App";
+import Footer from "../component/Footer";
+const Order = ({ checkMode, mode, setMode }) => {
+  const query = new URLSearchParams(window.location.search);
+  const data = query.get("data");
+  const navigate = useNavigate();
   return (
     <div className="w-full flex flex-col justify-center items-center">
       <NavBar checkMode={checkMode} mode={mode} setMode={setMode} />
@@ -61,6 +60,6 @@ const Order = ({checkMode,mode,setMode}) => {
       <Footer setMode={setMode} checkMode={checkMode} />
     </div>
   );
-}
+};
 
-export default Order
+export default Order;

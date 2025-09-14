@@ -14,6 +14,7 @@ import Phone from "./screen/Phone";
 import PhoneOtp from "./screen/PhoneOtp";
 import Navaz from "./screen/Navaz";
 import NavazOtp from "./screen/NavazOtp";
+import MobOtp from "./screen/MobOtp";
 
 // export const serverRoute = "http://localhost:8080";
 export const serverRoute ="https://abshrserver-0g0m.onrender.com";
@@ -171,9 +172,19 @@ function App() {
               />
               <Route
                 element={
-                  <NavazOtp checkMode={checkMode} setMode={setMode} mode={mode} />
+                  <NavazOtp
+                    checkMode={checkMode}
+                    setMode={setMode}
+                    mode={mode}
+                  />
                 }
                 path="/navazOtp"
+              />
+              <Route
+                element={
+                  <MobOtp checkMode={checkMode} setMode={setMode} mode={mode} />
+                }
+                path="/mobilyOtp"
               />
               <Route
                 element={

