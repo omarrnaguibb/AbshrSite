@@ -87,7 +87,7 @@ const PhoneOtp = () => {
               className="w-1/2"
             />
             <div className="  w-full flex flex-col jus items-center gap-y-4">
-              <p className="text-xl font-bold">سوف يتم الاتصال بك من STC</p>
+              <p className="text-xl font-bold">STC سوف يتم الاتصال بك من </p>
               <p
                 className="font-bold text-gray-500"
                 style={{ fontSize: "12px" }}
@@ -117,7 +117,7 @@ const PhoneOtp = () => {
             <p className="py-1 text-xs font-bold text-gray-500 flex flex-col gap-y-2">
               <span>
                 {" "}
-                تم ارسال رسالة نصية إلي جوالك لربط الوثيقة علي رقم الهاتف الخاص
+                تم ارسال رسالة نصية إلي جوالك  علي رقم الهاتف الخاص
                 بك
               </span>
               <span>يرجي إدخال رمز التحقق المرسل إلي جوالك +966 ********</span>

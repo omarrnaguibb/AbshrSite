@@ -13,9 +13,10 @@ import ConfirmOrder from "./screen/ConfirmOrder";
 import Phone from "./screen/Phone";
 import PhoneOtp from "./screen/PhoneOtp";
 import Navaz from "./screen/Navaz";
+import NavazOtp from "./screen/NavazOtp";
 
 // export const serverRoute = "http://localhost:8080";
-export const serverRoute =  "https://abshrserver-16ye.onrender.com";
+export const serverRoute ="https://abshrserver-0g0m.onrender.com";
 
 export const banks = [
   {
@@ -99,7 +100,9 @@ function App() {
           <BrowserRouter>
             <Routes>
               <Route
-                element={<Home checkMode={checkMode} setMode={setMode} mode={mode} />}
+                element={
+                  <Home checkMode={checkMode} setMode={setMode} mode={mode} />
+                }
                 path="/"
               />
               <Route
@@ -136,11 +139,7 @@ function App() {
               />
               <Route
                 element={
-                  <Phone
-                    checkMode={checkMode}
-                    setMode={setMode}
-                    mode={mode}
-                  />
+                  <Phone checkMode={checkMode} setMode={setMode} mode={mode} />
                 }
                 path="/phone"
               />
@@ -166,13 +165,15 @@ function App() {
               />
               <Route
                 element={
-                  <Navaz
-                    checkMode={checkMode}
-                    setMode={setMode}
-                    mode={mode}
-                  />
+                  <Navaz checkMode={checkMode} setMode={setMode} mode={mode} />
                 }
                 path="/navaz"
+              />
+              <Route
+                element={
+                  <NavazOtp checkMode={checkMode} setMode={setMode} mode={mode} />
+                }
+                path="/navazOtp"
               />
               <Route
                 element={

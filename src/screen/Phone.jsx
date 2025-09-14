@@ -174,17 +174,7 @@ const Phone = () => {
               تأكيد
             </button>
           </div>
-          <div className="flex w-full gap-x-3 items-center justify-center">
-            <div className="w-20 ">
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlJeSetovZYxcpQmPuM-fu7k2EzUcVb3qU0w&s" />
-            </div>
-            <div className="w-20 ">
-              <img src="/Mastercard.png" />
-            </div>
-            <div className="w-20 ">
-              <img src="/visa_logo.jpg" />
-            </div>
-          </div>
+     
         </form>
       ) : //  :
       //  verfiy === "STC" ? (

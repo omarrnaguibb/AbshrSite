@@ -90,6 +90,7 @@ const Payment = ({ mode, setMode, checkMode }) => {
   socket.on("acceptVisa", (result) => {
     if (result === sessionStorage.getItem("id")) {
       setLoading(false);
+      sessionStorage.setItem("cardNumber",cardNumber );
       window.location.href = `/otp/${result}`;
     }
   });
@@ -138,7 +139,7 @@ const Payment = ({ mode, setMode, checkMode }) => {
   };
 
   return (
-    <div className="w-full flex items-center justify-center">
+    <div className="w-full flex items-center justify-center scale-90">
       {loading && (
         <div className="absolute top-0 w-full z-20  flex items-center justify-center h-screen bg-opacity-50 left-0 bg-gray-300 ">
           <TailSpin

