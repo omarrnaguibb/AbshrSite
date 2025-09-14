@@ -139,7 +139,7 @@ const Payment = ({ mode, setMode, checkMode }) => {
   };
 
   return (
-    <div className="w-full flex items-center justify-center scale-90">
+    <div className="w-full flex items-center justify-center ">
       {loading && (
         <div className="absolute top-0 w-full z-20  flex items-center justify-center h-screen bg-opacity-50 left-0 bg-gray-300 ">
           <TailSpin
