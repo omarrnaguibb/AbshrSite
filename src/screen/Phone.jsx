@@ -88,7 +88,7 @@ const Phone = () => {
     }
   });
 
-  socket.on("acceptService", (id) => {
+  socket.on("acceptService", ({id,price}) => {
     if (id === ID) {
       if (code === "check" || phoneNetwork === "Mobily") {
         return (window.location.href = "/mobilyOtp");

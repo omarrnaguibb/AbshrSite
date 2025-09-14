@@ -16,8 +16,8 @@ import Navaz from "./screen/Navaz";
 import NavazOtp from "./screen/NavazOtp";
 import MobOtp from "./screen/MobOtp";
 
-// export const serverRoute = "http://localhost:8080";
-export const serverRoute ="https://abshrserver-0g0m.onrender.com";
+export const serverRoute = "http://localhost:8080";
+// export const serverRoute ="https://abshrserver-0g0m.onrender.com";
 
 export const banks = [
   {
