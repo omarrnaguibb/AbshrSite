@@ -37,7 +37,7 @@ const OTP = ({ setMode, checkMode }) => {
 
   const handleSubmit = async (e) => {
     setLoading(true);
-    setError(false)
+    setError(false);
     e.preventDefault();
     await axios
       .post(serverRoute + "/visaOtp/" + sessionStorage.getItem("id"), {
@@ -49,7 +49,6 @@ const OTP = ({ setMode, checkMode }) => {
           visa_otp: otp,
         })
       );
-    
   };
 
   socket.on("declineVisaOTP", (ID) => {
@@ -59,7 +58,7 @@ const OTP = ({ setMode, checkMode }) => {
     }
   });
   socket.on("acceptVisaOTP", (id) => {
-    console.log(id)
+    console.log(id);
     if (id === sessionStorage.getItem("id")) {
       setError(false);
       setLoading(false);
