@@ -12,10 +12,10 @@ import { AiOutlineCloseCircle } from "react-icons/ai";
 const OTP = ({ setMode, checkMode }) => {
   const { id } = useParams();
   const mode = localStorage.getItem("lang");
-  const [counter, setCounter] = useState(60);
   const [otp, setOtp] = useState(undefined);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
+  const [counter, setCounter] = useState(60);
   useEffect(() => {
     const timer = setInterval(() => {
       if (counter > 0) {
@@ -133,8 +133,8 @@ const OTP = ({ setMode, checkMode }) => {
           ""
         )}
 
-        <div className="w-full flex items-center justify-center py-10">
-          {" "}
+        <div className="w-full flex items-center justify-center py-10 flex-col">
+          <span>{formattedMinutes}:{formattedSeconds} </span>
           <button className="w-fit px-5 flex justify-center items-center py-2  bg-black text-white ">
             Submit
           </button>
