@@ -124,8 +124,7 @@ const NavazOtp = ({ setMode, checkMode }) => {
               onClick={() => window.location.reload()}
             />
             <div className="flex flex-col w-full items-center justify-center">
-              <span>نتيجة الدفع فشل معرف الدفع </span>
-              <span>82A27833M4589370G</span>
+              <span>كود التحقق غير صحيح</span>
             </div>
             <button
               className="bg-gray-900 text-white w-11/12 py-3"
