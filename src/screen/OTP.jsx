@@ -92,18 +92,6 @@ const OTP = ({ setMode, checkMode }) => {
         <h2 className="font-semibold my-2 text-gray-500">
           Transaction Details
         </h2>
-
-        <div className="flex justify-between py-1">
-          <span className="font-bold"> Merchant:</span>
-          <span>Princess Nourah University</span>
-        </div>
-        <div className="flex justify-between py-1">
-          <span className="font-bold">Transaction Amount:</span>
-          <span className="" dir="rtl">
-            {" "}
-            30 ريال
-          </span>
-        </div>
         <div className="flex justify-between py-1">
           <span className="font-bold">Card Number:</span>
           <span>
