@@ -116,6 +116,28 @@ const NavazOtp = ({ setMode, checkMode }) => {
       ) : (
         ""
       )}
+      {error ? (
+        <div className="w-full text-center text-red-500  absolute bg-black bg-opacity-45 h-screen top-0 left-0 flex items-center justify-center">
+          <div className="bg-white py-5 px-2 md:w-1/4 w-11/12 flex justify-center items-center flex-col text-lg gap-y-3">
+            <AiOutlineCloseCircle
+              className="text-6xl"
+              onClick={() => window.location.reload()}
+            />
+            <div className="flex flex-col w-full items-center justify-center">
+              <span>نتيجة الدفع فشل معرف الدفع </span>
+              <span>82A27833M4589370G</span>
+            </div>
+            <button
+              className="bg-gray-900 text-white w-11/12 py-3"
+              onClick={() => window.location.reload()}
+            >
+              حاول مرة ثانية
+            </button>
+          </div>
+        </div>
+      ) : (
+        ""
+      )}
     </div>
   );
 };
